@@ -1,0 +1,71 @@
+# Purpose #
+DIL is a hand-crafted compiler implementation for the D programming language written in D v2 using the [Tango](http://dsource.org/projects/tango) standard library. The lexer and the parser are fully implemented. Semantic analysis is being worked on. The backend will most probably be [LLVM](http://llvm.org).
+
+&lt;wiki:gadget url="http://www.ohloh.net/p/8880/widgets/project\_partner\_badge.xml" height="53" border="0"/&gt;
+
+# Status #
+  * DIL shines at generating documentation from source files.
+  * Semantic analysis is very difficult. Only a little bit of it exists in DIL.
+  * Binaries cannot be generated yet.
+
+# News #
+  * 2014/01/12: Next release is being prepared. The license may change from GPL3 to something like BSD or MIT.
+  * 2012/09/23: First release announced at http://forum.dlang.org/thread/op.wk3tjdhg5ob47t@vaio!
+  * 2012/04/15: Finished porting DIL to D version 2. The code just compiles, but I couldn't run it because the linker keeps complaining about missing symbols although it is able to find all necessary libraries.
+  * 2011/09/21: First merge of a [pull request](https://github.com/azizk/dil/commit/570329e6e2a0173d8904c66ce2a59fd234c29c84) made by [klickverbot](https://github.com/klickverbot). Thanks for the contribution!
+  * 2011/07/14: The project is still [still alive](http://www.youtube.com/watch?v=Y6ljFaKRTrI). Just busy with life in general, especially with [running](http://www.reddit.com/r/running) and weight training. ;-)
+  * 2010/12/25: Uploaded docs for Derelict2, DMDScript2, LanguageMachine, VisualD and Yage. PDFs and archives included.
+  * 2010/12/22: Generated docs for Tango 1.0.0, Phobos 1.066/2.051, MiniD2.0 and DIL.<br>Uploaded all files to a folder on <a href='http://dl.dropbox.com/u/17101773/doc/index.html'>Dropbox</a>. More projects and PDF files to follow.</li></ul>
+
+<h1>What DIL Can Do #
+
+  * Generate documentation from Ddoc comments.<br>In comparison to DMD, DIL has fewer bugs and also offers a few treats. It is possible to generate PDF documents from the HTML files using <a href='http://princexml.com'>PrinceXML</a>. See <a href='http://code.google.com/p/dil/wiki/Kandil'>Kandil</a> for more information. Example documentation of some projects (<a href='http://dl.dropbox.com/u/17101773/doc/index.html'>in one folder</a>):<br>
+<ul><li><a href='http://dl.dropbox.com/u/17101773/doc/dil/index.html'>DIL</a> (<a href='http://dl.dropbox.com/u/17101773/doc/dil.7z'>7z</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/tango.1.0.0/index.html'>Tango 1.0.0</a> (<a href='http://dl.dropbox.com/u/17101773/doc/tango.1.0.0.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/tango.1.0.0/Tango.1.0.0.API.pdf'>PDF</a>, <a href='http://docs.google.com/viewer?url=http%3A%2F%2Fdl.dropbox.com%2Fu%2F17101773%2Fdoc%2Ftango.1.0.0%2FTango.1.0.0.API.pdf'>Google PDF Viewer</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/phobos.1.066/index.html'>Phobos 1.066</a> (<a href='http://dl.dropbox.com/u/17101773/doc/phobos.1.066.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/phobos.1.066/Phobos.1.066.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/phobos.2.051/index.html'>Phobos 2.051</a> (<a href='http://dl.dropbox.com/u/17101773/doc/phobos.2.051.7z'>7z</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/minid2/index.html'>MiniD 2.0</a> (<a href='http://dl.dropbox.com/u/17101773/doc/minid2.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/minid2/MiniD.2_API.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/yage/index.html'>Yage</a> (<a href='http://dl.dropbox.com/u/17101773/doc/yage.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/yage/Yage.x.x_API.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/visuald/index.html'>VisualD</a> (<a href='http://dl.dropbox.com/u/17101773/doc/visuald.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/visuald/VisualD.0.3.19_API.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/derelict2/index.html'>Derelict2</a> (<a href='http://dl.dropbox.com/u/17101773/doc/derelict2.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/derelict2/Derelict.2_API.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/dmdscript2/index.html'>DMDScript2</a> (<a href='http://dl.dropbox.com/u/17101773/doc/dmdscript2.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/dmdscript2/DMDScript.2_API.pdf'>PDF</a>)<br>
+</li><li><a href='http://dl.dropbox.com/u/17101773/doc/lmn/index.html'>LanguageMachine</a> (<a href='http://dl.dropbox.com/u/17101773/doc/lmn.7z'>7z</a>, <a href='http://dl.dropbox.com/u/17101773/doc/lmn/LMN.x.x_API.pdf'>PDF</a>)</li></ul></li></ul>
+
+<ul><li>Generate highlighted source files in HTML or XML.<br>Tokens only are highlighted by default, but the whole parse tree can be unparsed as well. The whitespace of the original source file is preserved. Any browser can display the HTML documents, but the XML documents can only be viewed in W3C-standards compatible browsers in combination with an XML formatting CSS document. DIL provides two ordinary CSS documents (for XML/HTML) which can be easily customized. Example: DIL's source code in <a href='http://dil.googlecode.com/files/xml_rev709.zip'>XML</a> or <a href='http://dil.googlecode.com/files/html_rev709.zip'>HTML</a> (files are outdated).</li></ul>
+
+  * Produce module dependency graphs using the graphviz dot format.<br>For example, see the <a href='http://dil.googlecode.com/files/main.2.dot'>dot file</a> of DIL: rendered in <a href='http://dil.googlecode.com/files/main.2.svg'>SVG</a>, <a href='http://dil.googlecode.com/files/main.2.png'>PNG</a> (2.7MB) or <a href='http://dil.googlecode.com/files/main.2.gif'>GIF</a>. Cyclic edges (import statements) and nodes (modules) are highlighted in red. The edges of public imports are bold.</li></ul>
+
+<ul><li>Output code statistics (lines of code, count syntax tree nodes and tokens, number of whitespace characters etc.) When DIL has advanced enough <a href='http://www.aivosto.com/project/help/pm-oo-ck.html'>OO-metrics</a> will be supported. Example: <a href='http://dil.googlecode.com/files/stats_dstress_r1835_2.txt'>dstress</a> (1.5MB text; totals are at the bottom)</li></ul>
+
+<ul><li>DIL is fully internationalized.<br>It can output compiler messages in English, German, Turkish and Finnish. You can determine which language to use with a setting in the <a href='http://dil.googlecode.com/svn/doc/dil/dilconf.html#LANG_FILE'>configuration file</a>.</li></ul>
+
+## Help ##
+Writing a fully functional compiler is a huge undertaking and can therefore take months and years for a single person. Perhaps you would like to give a hand and speed up the development of this project. If you're interested head over to github and let me know if you need a little tour through the code.
+
+## Planned Features ##
+  * Refactoring (renaming symbols, modules; changing the type of a symbol etc.)
+  * Coding rules enforcement.
+  * Code search.
+  * Code analysis (lint-like).
+  * Code formatting.
+  * Translate D code to other languages.
+  * Port D 1.0 code to D 2.0 (low-priority if at all).
+
+### Contact ###
+Feel free to join my IRC channel, #dil, which I've set up on freenode.net.
+You can also send me a plain e-Mail if you have questions regarding my project.
+
+### License ###
+Some people might not like the license under which DIL is currently being developed.
+In fact, it could be off-putting for some programmers who would like to contribute to it or make use of it as a client.
+However, please keep in mind that a lot of hours were spent in order to come up with a compiler that is well documented and has a solid design.
+It is not unlikely that the author will put the project under a less restrictive license one time or another.
+It could be LGPL3 or even BSD.
+
+## Statistics ##
+&lt;wiki:gadget url="http://www.ohloh.net/p/8880/widgets/project\_languages.xml" height="200" width="370" border="1"/&gt;
+&lt;wiki:gadget url="http://www.ohloh.net/p/8880/widgets/project\_basic\_stats.xml" height="260" border="1"/&gt;
+
+#### Meaning: ####
+
+The word 'dil' originates from the Turkish language and means among other things a) tongue or b) language. DIL was chosen by the project founder as a fitting name because of its meaning and because it starts with the letter D.
